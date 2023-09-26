@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ListGroup, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { routes } from "../../../../shared";
 
 export const PostItem = ({ post, paramsRW }) => {
   const { index, style, setRowHeight } = paramsRW;
@@ -13,10 +14,10 @@ export const PostItem = ({ post, paramsRW }) => {
   }, [index, rowRef, setRowHeight]);
 
   return (
-    <ListGroup.Item ref={rowRef} key={post.id} style={style}>
+    <ListGroup.Item ref={rowRef} style={style}>
       <span className="fw-bold">{`${post.id}. ${post.title}:`}</span>
       <p className="text-truncate">{post.body}</p>
-      <Link to={`${post.id}`}>
+      <Link to={routes.pages.post(post.id)}>
         <Button>Читать полностью</Button>
       </Link>
     </ListGroup.Item>

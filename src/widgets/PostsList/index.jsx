@@ -3,11 +3,11 @@ import { ListGroup } from "react-bootstrap";
 import { VariableSizeList } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 
-import { useGetPostsQuery } from "../store";
-import { PostItem } from "./PostItem";
+import { postModel } from "../../entities/post";
+import { PostItem } from "../../entities/post";
 
 export const PostsList = () => {
-  const { data: posts = [] } = useGetPostsQuery();
+  const { data: posts = [] } = postModel.useGetPostsQuery();
 
   const listRef = useRef(null);
   const rowHeights = useRef({});

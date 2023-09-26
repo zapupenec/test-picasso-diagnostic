@@ -1,12 +1,11 @@
 import { Container, Spinner } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
-import { useGetPostQuery } from "../store";
-import { PostCard } from "../components";
+import { postModel, PostCard } from "../../entities/post";
 
 export const PostPage = () => {
   const { id } = useParams();
-  const { data: post = {}, isLoading } = useGetPostQuery(id);
+  const { data: post = {}, isLoading } = postModel.useGetPostQuery(id);
 
   return (
     <Container className="h-100 overflow-hidden">

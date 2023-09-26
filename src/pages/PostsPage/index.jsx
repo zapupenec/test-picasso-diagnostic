@@ -1,9 +1,9 @@
 import { Container, Spinner } from "react-bootstrap";
-import { useGetPostsQuery } from "../store";
-import { PostsList } from "../components";
+import { postModel } from "../../entities/post";
+import { PostsList } from "../../widgets/index";
 
 export const PostsPage = () => {
-  const { isLoading } = useGetPostsQuery();
+  const { isLoading } = postModel.useGetPostsQuery();
 
   return (
     <Container className="h-100 overflow-hidden">
