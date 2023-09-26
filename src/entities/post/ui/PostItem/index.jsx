@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
-import { ListGroup, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { routes } from "../../../../shared";
+import { useEffect, useRef } from 'react';
+import { ListGroup, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { routes } from '../../../../shared';
 
 export const PostItem = ({ post, paramsRW }) => {
   const { index, style, setRowHeight } = paramsRW;
@@ -18,7 +18,7 @@ export const PostItem = ({ post, paramsRW }) => {
       <span className="fw-bold">{`${post.id}. ${post.title}:`}</span>
       <p className="text-truncate">{post.body}</p>
       <Link to={routes.pages.post(post.id)}>
-        <Button>Читать полностью</Button>
+        <Button>Просмотр</Button>
       </Link>
     </ListGroup.Item>
   );

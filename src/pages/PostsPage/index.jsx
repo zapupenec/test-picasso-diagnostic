@@ -1,6 +1,6 @@
-import { Container, Spinner } from "react-bootstrap";
-import { postModel } from "../../entities/post";
-import { PostsList } from "../../widgets/index";
+import { Container, Spinner } from 'react-bootstrap';
+import { postModel } from '../../entities/post';
+import { PostsList } from '../../widgets/index';
 
 export const PostsPage = () => {
   const { isLoading } = postModel.useGetPostsQuery();
@@ -14,8 +14,7 @@ export const PostsPage = () => {
             <Spinner className="mx-auto" animation="border" role="status">
               <span className="visually-hidden">Loading...</span>
             </Spinner>
-          ) : <PostsList />
-        }
+          ) : <PostsList />}
       </div>
     </Container>
   );

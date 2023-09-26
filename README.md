@@ -1,4 +1,4 @@
-# test-picasso-diagnostic
+# [test-picasso-diagnostic](https://test-picasso-diagnostic.vercel.app/)
 
 Используя React, RTK Query, React Router DOM 6, JSON Placeholder и FSD-архитектуру сделайте простое приложение:
 1. главная страница - список постов (бесконечный скролл + виртуализация)

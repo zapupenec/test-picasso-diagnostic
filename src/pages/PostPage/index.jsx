@@ -1,7 +1,7 @@
-import { Container, Spinner } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Container, Spinner } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 
-import { postModel, PostCard } from "../../entities/post";
+import { postModel, PostCard } from '../../entities/post';
 
 export const PostPage = () => {
   const { id } = useParams();
@@ -15,8 +15,7 @@ export const PostPage = () => {
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
-        ) : <PostCard post={post} />
-      }
+        ) : <PostCard post={post} />}
     </Container>
   );
 };
